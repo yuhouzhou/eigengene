@@ -13,5 +13,5 @@ if __name__ == '__main__':
     nx.draw(G, node_size=0.1)
 
     plt.tight_layout()
-    plt.savefig('network.pdf')
+    plt.savefig('../images/network.png')
     plt.show()
