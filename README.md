@@ -8,6 +8,12 @@ Gene expression data will be taken from the GEO database. The gene regulatory ne
 
 
 
+**keywords**:
+
+spectral graph theory, gene regulatory network, gene expression data, eigenvector, Escherichia coli
+
+
+
 Further reading:
 
 Clough, E., and Barrett, T. (2016). The gene expression omnibus database. Statistical Genomics: Methods and Protocols, 93-110.
