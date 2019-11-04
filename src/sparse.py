@@ -13,7 +13,7 @@ if __name__ == '__main__':
     plt.rc('figure', figsize=(30, 30))
     # # layout 1
     k = 5/np.sqrt(G.order())
-    layout = nx.spring_layout(G, k=0.05, iterations=50, seed=5)
+    layout = nx.spring_layout(G, k=5/np.sqrt(G.order()), iterations=50, seed=5)
     # # layout 2
     # df1 = pd.DataFrame(index=G.nodes(), columns=G.nodes())
     # for row, data in nx.shortest_path_length(G):
@@ -24,15 +24,15 @@ if __name__ == '__main__':
 
     tfs = list(df.tf.unique())
     genes = list(df.gene.unique())
-    tf_size = [G.degree(tf) * 40 for tf in tfs]
-    # nx.draw_networkx_nodes(G, layout, nodelist=tfs, node_color='lightblue', node_size=tf_size, edgecolors='#cccccc')
-    nx.draw_networkx_nodes(G, layout, nodelist=tfs, node_color='lightblue', node_size=100, edgecolors='#cccccc')
+    tf_size = [G.degree(tf) * 20 for tf in tfs]
+    nx.draw_networkx_nodes(G, layout, nodelist=tfs, node_color='lightblue', node_size=tf_size, edgecolors='#696969')
+    # nx.draw_networkx_nodes(G, layout, nodelist=tfs, node_color='lightblue', node_size=100, edgecolors='#cccccc')
     nx.draw_networkx_nodes(G, layout, nodelist=genes, node_color='orange', node_size=100, edgecolors="#cccccc")
     nx.draw_networkx_edges(G, layout, width=1, edge_color="#cccccc")
     node_labels = dict(zip(tfs, tfs))
-    # nx.draw_networkx_labels(G, layout, labels=node_labels)
+    nx.draw_networkx_labels(G, layout, labels=node_labels)
     plt.axis('off')
     plt.title("TF-Gene Regulatory Network")
     plt.tight_layout()
-    plt.savefig('../images/main.png')
+    plt.savefig('../images/sparse.png')
     plt.show()
