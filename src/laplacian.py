@@ -8,22 +8,17 @@ if __name__ == '__main__':
     df.columns = ['tf', 'gene', 'effect']
 
     G = nx.from_pandas_edgelist(df=df, source='tf', target='gene', edge_attr='effect')
+    # Laplacian matrix of a graph is symmetric, positive semidefinite, and singular
     L = nx.laplacian_matrix(G)
     L_eigen = nx.laplacian_spectrum(G)
 
-    # plt.rc('figure', figsize=(30, 30))
-    # layout = nx.spring_layout(G, k=0.05, iterations=50, seed=5)
-    #
-    # tfs = list(df.tf.unique())
-    # genes = list(df.gene.unique())
-    # tf_size = [G.degree(tf) * 40 for tf in tfs]
-    # nx.draw_networkx_nodes(G, layout, nodelist=tfs, node_color='lightblue', node_size=100, edgecolors='#cccccc')
-    # nx.draw_networkx_nodes(G, layout, nodelist=genes, node_color='orange', node_size=100, edgecolors="#cccccc")
-    # nx.draw_networkx_edges(G, layout, width=1, edge_color="#cccccc")
-    # node_labels = dict(zip(tfs, tfs))
-    # plt.axis('off')
-    # plt.title("TF-Gene Regulatory Network")
-    # plt.tight_layout()
-    # plt.savefig('../images/laplacian.png')
-    # plt.show()
+    plt.rc('figure', figsize=(30, 30))
+    layout = nx.spring_layout(G, k=0.05, iterations=50, seed=5)
+    # TODO: node_color shoule be changed to the coefficient of eigenvectors
+    nx.draw(G, layout, node_size=100, node_color=range(2052), edge_color="#cccccc", cmap=plt.cm.Greens)
+    plt.axis('off')
+    plt.title("TF-Gene Regulatory Network")
+    plt.tight_layout()
+    plt.savefig('../images/laplacian.png')
+    plt.show()
 

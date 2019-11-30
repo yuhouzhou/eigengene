@@ -7,9 +7,9 @@
  (GRNs, also known as **transcriptional regulatory networks**) are networks of causal interactions among transcription factors and downstream genes, and are usually represented with **directed graphs** and inferred by **gene expression data**. -- [Network Inference and Reconstruction in Bioinformatics](https://www.sciencedirect.com/science/article/pii/B9780128096338202902)
 
  Paolo Tieri, ... Filippo Castiglione, in [Encyclopedia of Bioinformatics and Computational Biology](https://www.sciencedirect.com/referencework/9780128114322), 2019
- 
+
  - [What is the difference between Gene Regulatory Network (GRN) vs Transcription Regulatory Network (TRN)?](https://www.researchgate.net/post/What_is_the_difference_between_Gene_Regulatory_Network_GRN_vs_Transcription_Regulatory_Network_TRN)
- 
+
 * microarray:
   a collection of microscopic DNA spots attached to a solid surface.
   
@@ -29,3 +29,20 @@
 
 ## Code Example
 [NetworkX Graphs from Source-Target DataFrame](http://jonathansoma.com/lede/algorithms-2017/classes/networks/networkx-graphs-from-source-target-dataframe/)
+
+[Community Detection in Social Networks](http://francescopochetti.com/tag/social-network-analysis/)
+
+## Others
+
+### KEGG
+
+[Reference Pathway](https://www.genome.jp/kegg-bin/show_pathway?map01100)
+
+[Pyrimidine metabolism](https://www.genome.jp/dbget-bin/www_bget?pathway+map00240)
+
+[Porphyrin and chlorophyll metabolism](https://www.genome.jp/dbget-bin/www_bget?pathway+map00860)
+
+[Surfur metabolism](https://www.genome.jp/dbget-bin/www_bget?pathway+map00920)
+
+[KGML](https://www.kegg.jp/kegg/xml/)
+

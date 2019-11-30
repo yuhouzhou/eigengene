@@ -24,7 +24,7 @@ if __name__ == '__main__':
 
     tfs = list(df.tf.unique())
     genes = list(df.gene.unique())
-    tf_size = [G.degree(tf) * 40 for tf in tfs]
+    # tf_size = [G.degree(tf) * 40 for tf in tfs]
     # nx.draw_networkx_nodes(G, layout, nodelist=tfs, node_color='lightblue', node_size=tf_size, edgecolors='#cccccc')
     nx.draw_networkx_nodes(G, layout, nodelist=tfs, node_color='lightblue', node_size=100, edgecolors='#cccccc')
     nx.draw_networkx_nodes(G, layout, nodelist=genes, node_color='orange', node_size=100, edgecolors="#cccccc")
