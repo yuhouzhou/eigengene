@@ -1,6 +1,7 @@
 .*/
 !.git/
 env/
+output*/
 
 # Tex ignore
 ## Core latex/pdflatex auxiliary files:
